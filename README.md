@@ -1,3 +1,3 @@
 # Mud Maps
 ------
-## Colonies location extracted from orthomosaics made with Agisoft Metashape
+### Colonies location extracted from orthomosaics made with Agisoft Metashape
