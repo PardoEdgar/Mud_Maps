@@ -1,14 +1,25 @@
 library(tidyverse)
 library(ggrepel)
+library(rstudioapi)
+
+# Seleccionar un archivo
+file <- file.choose()
+#Extract file name
+basename <- basename(file)
+#Remove characters that not include site or transect
+clean_basename <- basename |>
+  str_remove("Colonies_data_csv_") |>
+  str_remove(".csv")
+print(clean_basename)
+#Extract Site_name and Transect
+Site_name <- str_split_i(clean_basename, "_", 1)
+Transect <- str_split_i(clean_basename, "_", 2)
 
 #Load data
-path <- "C:/Users/jandr/Downloads/Metashape_Work/Colonies_data_csv_Saboga_0to25.csv"
-Colonies_data <- read.csv(path)
+Colonies_data <- read.csv(file)
 
-#Remove colonies that are from the other transect part. Use: |>  dplyr::filter(!Colony_ID %in% c(716, 717, 918))
-Colonies_data <- Colonies_data[!duplicated(Colonies_data$Colony_ID), ] |>
-  dplyr::filter(!Colony_ID %in% c(716, 717, 918))
-
+#Remove colonies that are from the other transect part. Use: |>  dplyr::filter(!Colony_ID %in% c())
+Colonies_data <- Colonies_data[!duplicated(Colonies_data$Colony_ID), ]
 #Tag data depending of Poles or Colonies Type (Poles are Capital letter and Colonies are numbers)
 Colonies_data$Type <- ifelse(
   grepl("[A-Z]", Colonies_data$Colony_ID),
@@ -21,6 +32,10 @@ subset_words <- (Colonies_data[Colonies_data$Type == "Poles", ])
 subset_words <- subset_words[order(subset_words$Colony_ID), ]
 subset_numbers <- (Colonies_data[Colonies_data$Type == "Colonies", ])
 
+#Create subtitle depending on the transect label
+Subtitle_plot <- ifelse(Transect == "0to25", "0-25 m", "25-50 m")
+
+title_name <- paste(Site_name, "coral colonies map")
 
 #Build the map
 ggplot(
@@ -43,7 +58,7 @@ ggplot(
   geom_point(aes(color = Type, shape = Type), size = 7, alpha = 1) +
   #Fixed x and y axis to get relative location.
   coord_fixed() +
-  labs(title = "Mud map of colonies in Saboga", subtitle = "0-25 m") +
+  labs(title = title_name, subtitle = Subtitle_plot) +
   xlab("X (meters)") +
   ylab("Y (meters)") +
   # Stablish X and Y limits
