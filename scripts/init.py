@@ -25,7 +25,7 @@ def extract_names_from_colonies():
             for marker in chunk.markers:
                 # Matching marker with a numeric label
                 if (
-                    re.fullmatch(r"\d+", marker.label)
+                    re.fullmatch(r"\d+", marker.label) is not None
                     or re.fullmatch(r"unk\d+", marker.label) is not None
                 ):
                     if marker.label not in colonies_data:
@@ -87,7 +87,7 @@ def create_dataframe(colonies_data, Site_name, Transect):
 # Run main function
 def main():
     colonies_data, Site_name, Transect = extract_names_from_colonies()
-    create_dataframe(colonies_data)
+    create_dataframe(colonies_data, Site_name, Transect)
 
 
 # Add to tools
