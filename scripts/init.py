@@ -86,7 +86,7 @@ def create_dataframe(colonies_data, Site_name, Transect):
 
 # Run main function
 def main():
-    colonies_data = extract_names_from_colonies()
+    colonies_data, Site_name, Transect = extract_names_from_colonies()
     create_dataframe(colonies_data)
 
 
