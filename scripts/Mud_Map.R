@@ -1,6 +1,5 @@
 library(tidyverse)
 library(ggrepel)
-library(rstudioapi)
 
 # Seleccionar un archivo
 file <- file.choose()
@@ -35,7 +34,7 @@ subset_numbers <- (Colonies_data[Colonies_data$Type == "Colonies", ])
 #Create subtitle depending on the transect label
 Subtitle_plot <- ifelse(Transect == "0to25", "0-25 m", "25-50 m")
 
-title_name <- paste(Site_name, "coral colonies map")
+title_name <- paste("Mud map of colonies in", Site_name)
 
 #Build the map
 ggplot(
