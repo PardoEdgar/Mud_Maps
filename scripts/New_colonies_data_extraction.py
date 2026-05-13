@@ -27,6 +27,9 @@ def extract_names_from_colonies():
                 if (
                     re.fullmatch(r"NC_\d_\d+", marker.label) is not None
                     or re.fullmatch(r"[A-Z]", marker.label) is not None
+                    or re.fullmatch(r"\d+", marker.label) is not None
+                    or re.fullmatch(r"unk\d+", marker.label) is not None
+                    or re.fullmatch(r"25m", marker.label) is not None
                 ):
                     if marker.label not in colonies_data:
                         # Add data to dictionary
