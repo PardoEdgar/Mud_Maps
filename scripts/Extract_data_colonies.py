@@ -27,6 +27,7 @@ def extract_names_from_colonies():
                 if (
                     re.fullmatch(r"\d+", marker.label) is not None
                     or re.fullmatch(r"unk\d+", marker.label) is not None
+                    or re.fullmatch(r"[A-Z]", marker.label) 
                 ):
                     if marker.label not in colonies_data:
                         # Add data to dictionary
@@ -46,26 +47,7 @@ def extract_names_from_colonies():
                                 "Z_Real_World_Position": Real_World_Position[2],
                             }
                         )
-                elif re.fullmatch(r"[A-Z]", marker.label) is not None:
-                    if marker.label not in colonies_data:
-                        # Add data to dictionary
-                        Internal_Position = np.array(marker.position)
-                        Real_World_Position = transform.mulp(marker.position)
-                        Real_World_Position = np.array(Real_World_Position)
-
-                        colonies_data.append(
-                            {
-                                "Colony_ID": marker.label,
-                                "X_internal": Internal_Position[0],
-                                "Y_internal": Internal_Position[1],
-                                "Z_internal": Internal_Position[2],
-                                # Using matrix to convert internal coordinates to world coordinates
-                                "X_Real_World_Position": Real_World_Position[0],
-                                "Y_Real_World_Position": Real_World_Position[1],
-                                "Z_Real_World_Position": Real_World_Position[2],
-                            }
-                        )
-
+                        
     print(colonies_data)
     return colonies_data, Site_name, Transect
 
