@@ -47,7 +47,6 @@ Colonies_data$Type <- case_when(
 #Create subsets of data by Type (Colonies or letter)
 subset_words <- (Colonies_data[Colonies_data$Type == "Poles", ])
 subset_words <- subset_words[order(subset_words$Colony_ID), ]
-subset_numbers <- (Colonies_data[Colonies_data$Type == "Colonies", ])
 
 
 #Create subtitle depending on the transect label
