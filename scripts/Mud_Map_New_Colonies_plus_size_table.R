@@ -156,9 +156,9 @@ ggplot(
     x = Table_x,
     y = Inf,
     label = table_text,
-    fill = alpha("gray", 0.3),
+    fill = alpha("#D4CC49", 0.3),
     family = "Impact",
-    vjust = 5
+    vjust = 3
   )
 
 #ggsave("Mud_map.pdf", plot = mud_map, width = 11, height = 8.5)
