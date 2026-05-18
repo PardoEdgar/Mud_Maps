@@ -63,7 +63,7 @@ table_text <- paste(
   sprintf(" %5s    %-7s    %-6s ", "Size", "Type 1", "Type 3"),
   paste(
     sprintf(
-      " %5s    %-7s   %-6s ",
+      "   %5s    %-7s   %-6s ",
       Size_wide$Size,
       Size_wide$NC_1,
       Size_wide$NC_3
@@ -77,7 +77,7 @@ table_text <- paste(
 subset_words <- (Colonies_data[Colonies_data$Type == "Poles", ])
 subset_words <- subset_words[order(subset_words$Colony_ID), ]
 
-Table_x <- (max(Colonies_data$X_Real_World_Position) - 0.05)
+Table_x <- (max(Colonies_data$X_Real_World_Position) - 1.5)
 #Create subtitle depending on the transect label
 Subtitle_plot <- ifelse(Transect == "0to25", "0-25 m", "25-50 m")
 
@@ -158,7 +158,7 @@ ggplot(
     label = table_text,
     fill = alpha("#D4CC49", 0.3),
     family = "Impact",
-    vjust = 3
+    vjust = 4.5
   )
 
 #ggsave("Mud_map.pdf", plot = mud_map, width = 11, height = 8.5)
