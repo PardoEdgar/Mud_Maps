@@ -29,8 +29,8 @@ All scripts conducted in Python and R are provided in sequential order:
 ---------------
 ## Requirements
 ### Python
-  - API Metashape
-  - NumPY
+  - Metashape
+  - NumPy
   - Os
   - Pandas
 ### R 
