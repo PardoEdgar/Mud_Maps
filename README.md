@@ -20,10 +20,10 @@ Here we also acquired positions of new possible tagged coral colonies using the 
 ---
 ## Reproducibility
 All scripts conducted in Python and R are provided in sequential order:
- 1. `01_Extract_data_colonies.py.py`
- 2. `02_Mud_Map.R`
- 3. `03_New_colonies_data_extraction.py`
- 4. `04_Mud_Map_New_Colonies.R`
+ 1. `Extract_data_colonies.py.py`
+ 2. `Mud_Map.R`
+ 3. `New_colonies_data_extraction.py`
+ 4. `Mud_Map_New_Colonies.R`
  5. `Mud_Map_New_Colonies_plus_size_table.R`
     
 ---------------
