@@ -1,4 +1,4 @@
-# Spatial Mapping of Tagged Coral Colonies in Rohr Reef Resilience project, Connolly Lab, 2026
+# Spatial Mapping of Tagged Coral Colonies in Rohr Reef Resilience Project, Connolly Lab, 2026
 ## Smithsonian Tropical Research Institute (STRI)
 
 ------
