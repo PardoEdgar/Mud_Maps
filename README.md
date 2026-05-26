@@ -46,7 +46,7 @@ All data and code required to reproduce the Spatial Mapping presented here are i
 Edgar Alejandro Pardo Sarmiento, Connolly Lab
 
 ### Collaborators
-Mariana Fernández, Connolly Lab
+Mariana Lucía Fernández, Connolly Lab
 
 --------
 ## License
