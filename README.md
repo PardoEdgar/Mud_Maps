@@ -11,25 +11,25 @@ Here we also acquired new possible tagged coral colonies using de Orthomosaics a
 
 ---
 ## Contents
-- `data/`: Raw and processed datasets  
-- `scripts/`: R scripts for data extraction and analysis  
-- `imagej/`: ImageJ macros for pixel intensity extraction and stripe detection  
-- `Figures/`: Optocardiograms and Experimental setup images for Optocardiography
+- `Colonies data/`: Internal and Real World colonies and poles position datasets
+- `New_colonies_data/`: Internal and Real World colonies and poles position with new possible colonies to tag datasets
+- `scripts/`: Python and R scripts for data extraction and building maps
+- `Mud_maps/`: Complete Spatial Mapping for tagged coral colonies
+- `New_colonies_Mud_Maps/`:  Complete Spatial Mapping for tagged coral colonies and new possible colones to tag
 
 ---
 ## Reproducibility
 All scripts conducted in Python and R are provided in sequential order:
- 1. `01_heart_pixel_data_obtention.py`
- 2. `02_heart_pixel_data_obtention.py`
- 3. `03_heart_pixel_data_obtention.py`
- 4. `04_heart_pixel_data_obtention.py`
- 5. `05_heart_pixel_data_obtention.R`
- 6. `06_heart_pixel_data_obtention.R`
+ 1. `01_Extract_data_colonies.py.py`
+ 2. `02_Mud_Map.R`
+ 3. `03_New_colonies_data_extraction.py`
+ 4. `04_Mud_Map_New_Colonies.R`
+ 5. `Mud_Map_New_Colonies_plus_size_table.R`
     
 ---------------
 ## Requirements
 ### Python
-  - API metashape
+  - API Metashape
   - NumPY
   - Os
   - Pandas
