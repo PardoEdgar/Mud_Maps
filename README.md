@@ -30,6 +30,7 @@ All scripts conducted in Python and R are provided in sequential order:
 ## Requirements
 ### Python
   - Metashape
+  - re
   - NumPy
   - Os
   - Pandas
