@@ -1,8 +1,10 @@
 # Spatial Mapping of Tagged Coral Colonies in (Rohr Reef Resilience project, 2026, Conolly Lab
-# Smithsonian Tropical Research Institute (STRI)
+ Smithsonian Tropical Research Institute (STRI)
 
 ------
+
 ## Overview
+
 ------
 
 This repository provides a reproducible workflow for Spatial Mapping from 3D models and Orthomosacs built in Agisoft Metashape
